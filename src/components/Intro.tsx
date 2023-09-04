@@ -17,10 +17,10 @@ function Intro() {
           <span className="text-3xl font-bold w-full">Anandakrishnan.</span>
         </p>
         <p className="text-3xl md:text-4xl font-bold text-center">
-          I'm a FULL STACK DEVELOPER
+          I&apos;m a FULL STACK DEVELOPER
         </p>
         <p className="text-sm text-justify md:p-2">
-          I'm a versatile full-stack developer proficient in both front-end and
+          I&apos;m a versatile full-stack developer proficient in both front-end and
           back-end technologies, delivering robust web solutions with efficiency
           and innovation.
         </p>
