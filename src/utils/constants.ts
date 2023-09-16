@@ -14,6 +14,8 @@ import tasteHub from "../../public/tasteHub.png";
 import envelope from "../../public/envelope.png";
 import linkedin from "../../public/linkedin.png";
 import github from "../../public/github.png";
+import shareWithUs from "../../public/sharewithus.png"
+import { Share } from "next/font/google";
 
 export const navLinks = [
   {
@@ -146,6 +148,16 @@ export const skills = [
 export const projects = [
   {
     id: "1",
+    img: shareWithUs,
+    title: "SHARE WITH US",
+    desc: "Share With Us is a blogging website where you can share beautiful content with a global audience. It utilizes Vite.js and Tailwind CSS for frontend development, while the backend is powered by MySQL, Node.js, and Express.",
+    button1: "Live Site",
+    url1: "https://share-with-us-orpin.vercel.app/",
+    button2: "Source Code",
+    url2: "https://github.com/Anandakrishnan21/ShareWithUs-blog-frontend",
+  },
+  {
+    id: "2",
     img: clipVista,
     title: "CLIP VISTA",
     desc: "ClipVista is a youtube-clone video streaming website created using Rapid API in React.JS and Tailwind CSS.",
@@ -155,7 +167,7 @@ export const projects = [
     url2: "https://github.com/Anandakrishnan21/ClipVista",
   },
   {
-    id: "2",
+    id: "3",
     img: tasteHub,
     title: "TASTE HUB",
     desc: "TasteHub is a food delivery website offering a variety of burgers, sandwiches, and pizzas.The website is created using ReactJS and Tailwind CSS.",
