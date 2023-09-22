@@ -26,7 +26,7 @@ function Resume() {
         My Resume
       </header>
       <iframe
-        src="https://drive.google.com/file/d/1xos7esXQ6JxBXhdsmdCOT-VREARm5gmT/preview"
+        src="https://drive.google.com/file/d/1x3uO8u-crQX7FL1Eoydid4P4iOdkJU9d/preview"
         className="w-full"
         height="1000"
       ></iframe>
