@@ -27,7 +27,7 @@ function Contact() {
       <div className="w-full md:w-1/2 flex flex-col gap-4 p-4">
         <div className="grid grid-cols-2 lg:grid-cols-1">
           {socials.map((social) => (
-            <div className="flex gap-2 items-center">
+            <div key={social.id} className="flex gap-2 items-center">
               <MdOutlineArrowOutward />
               <Link href={social.link}>{social.name}</Link>
             </div>

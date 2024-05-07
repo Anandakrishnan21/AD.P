@@ -19,7 +19,7 @@ function Intro() {
               className="w-32 h-10 object-cover"
             />
             <span className="text-xl md:text-4xl">
-              I'm a versatile full-stack developer proficient in both front-end
+              I&apos;m a versatile full-stack developer proficient in both front-end
               and back-end technologies, delivering robust web solutions with
               efficiency and innovation.
             </span>

@@ -36,10 +36,10 @@ function About() {
             adding beauty to the world.
           </h1>
           <p className="text-sm md:text-base text-neutral-400 px-4">
-            Hey! My name is Anandakrishnan. I'm an Engineering graduate. I've
+            Hey! My name is Anandakrishnan. I&apos;m an Engineering graduate. I&apos;ve
             been working as a developer for over 4 years. I have completed
             internships in more than one company as a full-stack developer. For
-            the last few years, I've been focusing on my passion for creating
+            the last few years, I&apos;ve been focusing on my passion for creating
             websites and designing.
           </p>
           <Link href="../resume" className="px-4">
