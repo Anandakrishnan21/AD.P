@@ -1,56 +1,39 @@
-"use client";
 import React from "react";
 import { projects } from "@/utils/constants";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import Link from "next/link";
+import { MdSubdirectoryArrowRight } from "react-icons/md";
 
-type Props = {
-  directionTop?: boolean;
-};
-
-function Project({ directionTop }: Props) {
+function Project() {
   return (
-    <div id="project" className="bg-slate-100 py-20">
-      <div className="w-5/6 md:max-w-5xl m-auto flex flex-col justify-center gap-3">
-        <h1 className="text-xl font-bold text-center">PROJECTS</h1>
-        <div className="grid grid-rows-2 place-content-center">
-          {projects.map((project) => (
-            <motion.div
-              key={project.id}
-              initial={{
-                y: directionTop ? 150 : -150,
-                opacity: 0,
-              }}
-              transition={{ duration: 1 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              className="flex flex-col md:flex-row justify-center md:justify-around items-center"
-            >
-              <Image
-                key={project.id}
-                src={project.img}
-                alt="project"
-                className="w-80 md:w-96"
-              />
-              <div className="w-5/6 md:w-1/2 flex flex-col items-center gap-3">
-                <h1 className="text-lg font-bold">{project.title}</h1>
-                <p className="text-justify text-sm">{project.desc}</p>
-                <div className="flex flex-row gap-3 text-md">
-                  <Link href={project.url1}>
-                    <button className=" bg-black text-white border-2 border-black p-1 rounded hover:bg-white hover:text-black duration-300 ">
-                      {project.button1}
-                    </button>
-                  </Link>
-                  <Link href={project.url2}>
-                    <button className=" bg-white text-black border-2 border-black p-1 rounded hover:bg-black hover:text-white duration-300 ">
-                      {project.button2}
-                    </button>
-                  </Link>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+    <div className="work">
+      <div id="work" className="md:w-1/3 p-4">
+        <div className="flex gap-2">
+          <MdSubdirectoryArrowRight />
+          <p>Selected Works</p>
         </div>
+      </div>
+      <div className="md:w-2/3">
+        {projects.map((project) => (
+          <div
+            key={project.id}
+            className="flex flex-col gap-2 p-4 border-b-[1px] border-neutral-700"
+          >
+            <Link href={project.link}>
+              <Image
+                src={project.img}
+                alt="project1"
+                width={800}
+                height={800}
+                className="w-full"
+              />
+            </Link>
+            <div className="flex text-xl flex-col md:flex-row justify-between gap-1">
+              <p>{project.title}</p>
+              <span className="text-neutral-300 text-sm">{project.desc}</span>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

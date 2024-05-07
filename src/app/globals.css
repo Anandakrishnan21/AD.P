@@ -2,6 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
+html {
     scroll-behavior: smooth;
+}
+
+.nav {
+    @apply w-full bg-neutral-950 text-white sticky top-0 z-[1] p-2;
+}
+
+.navDiv {
+    @apply text-sm mx-auto flex flex-col md:flex-row md:items-center justify-between p-2 gap-2;
+}
+
+.intro {
+    @apply p-[1rem] pt-[4rem] md:pt-[6rem] lg:pt-[12rem] bg-neutral-950 text-white border-b-[1px] border-neutral-800;
+}
+
+.introDiv {
+    @apply h-60 md:h-72 w-full col-start-4 col-end-13 row-start-1 row-end-2 flex flex-col justify-between;
+}
+
+.work {
+    @apply sticky pt-[6rem] bg-neutral-950 text-white flex flex-col md:flex-row;
+}
+
+.about {
+    @apply flex flex-col-reverse lg:flex-row py-20 bg-neutral-950 text-white;
+}
+
+.contact {
+    @apply flex flex-col md:flex-row py-20 bg-neutral-900 text-white;
 }
