@@ -6,10 +6,7 @@ import Link from "next/link";
 
 function About() {
   return (
-    <div
-      id="about"
-      className="about"
-    >
+    <div id="about" className="about">
       <div className="w-1/2 p-4 flex flex-col gap-2">
         <div className="flex gap-2">
           <MdSubdirectoryArrowRight />
@@ -17,7 +14,7 @@ function About() {
         </div>
         <div>
           {skills.map((skill) => (
-            <p>{skill}</p>
+            <p key={skill}>{skill}</p>
           ))}
         </div>
       </div>
@@ -36,11 +33,11 @@ function About() {
             adding beauty to the world.
           </h1>
           <p className="text-sm md:text-base text-neutral-400 px-4">
-            Hey! My name is Anandakrishnan. I&apos;m an Engineering graduate. I&apos;ve
-            been working as a developer for over 4 years. I have completed
-            internships in more than one company as a full-stack developer. For
-            the last few years, I&apos;ve been focusing on my passion for creating
-            websites and designing.
+            Hey! My name is Anandakrishnan. I&apos;m an Engineering graduate.
+            I&apos;ve been working as a developer for over 4 years. I have
+            completed internships in more than one company as a full-stack
+            developer. For the last few years, I&apos;ve been focusing on my
+            passion for creating websites and designing.
           </p>
           <Link href="../resume" className="px-4">
             Resume
