@@ -1,12 +1,34 @@
-import React from "react";
+import React, { useRef } from "react";
 import { skills } from "@/utils/constants";
 import Image from "next/image";
 import { MdSubdirectoryArrowRight } from "react-icons/md";
 import Link from "next/link";
+import { motion} from "framer-motion";
 
 function About() {
+  const transitionAnimation = {
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+    hidden: {
+      opacity: 0,
+      y: 20,
+    },
+  };
+  
   return (
-    <div id="about" className="about">
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      transition={{
+        staggerChildren: 0.1,
+        duration: 0.5,
+      }}
+      variants={transitionAnimation}
+      id="about"
+      className="about"
+    >
       <div className="w-1/2 p-4 flex flex-col gap-2">
         <div className="flex gap-2">
           <MdSubdirectoryArrowRight />
@@ -44,7 +66,7 @@ function About() {
           </Link>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

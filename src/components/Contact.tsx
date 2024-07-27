@@ -5,10 +5,28 @@ import {
   MdOutlineArrowOutward,
   MdSubdirectoryArrowRight,
 } from "react-icons/md";
+import {motion} from "framer-motion"
 
 function Contact() {
+  const transitionAnimation = {
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+    hidden: {
+      opacity: 0,
+      y: 20,
+    },
+  };
   return (
-    <div
+    <motion.div
+    initial="hidden"
+    animate="visible"
+    transition={{
+      staggerChildren: 0.1,
+      duration: 0.5,
+    }}
+    variants={transitionAnimation}
       id="contact"
       className="contact"
     >
@@ -41,7 +59,7 @@ function Contact() {
           </span>
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

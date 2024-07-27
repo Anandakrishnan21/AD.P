@@ -3,10 +3,30 @@ import { projects } from "@/utils/constants";
 import Image from "next/image";
 import Link from "next/link";
 import { MdSubdirectoryArrowRight } from "react-icons/md";
+import { motion } from "framer-motion";
 
 function Project() {
+  const transitionAnimation = {
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+    hidden: {
+      opacity: 0,
+      y: 20,
+    },
+  };
   return (
-    <div className="work">
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      transition={{
+        staggerChildren: 0.1,
+        duration: 0.5,
+      }}
+      variants={transitionAnimation}
+      className="work"
+    >
       <div id="work" className="md:w-1/3 p-4">
         <div className="flex gap-2">
           <MdSubdirectoryArrowRight />
@@ -20,9 +40,13 @@ function Project() {
             className="flex flex-col gap-2 p-4 border-b-[1px] border-neutral-700"
           >
             <Link href={project.link}>
-              <Image
+              <motion.img
                 src={project.img}
                 alt="project1"
+                whileHover={{ scale: 0.99 }}
+                transition={{
+                  duration: 0.5,
+                }}
                 width={800}
                 height={800}
                 className="w-full"
@@ -35,7 +59,7 @@ function Project() {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }
 
