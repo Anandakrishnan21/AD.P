@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { MdSubdirectoryArrowRight } from "react-icons/md";
 import { motion } from "framer-motion";
+import BorderAnimation from "./BorderAnimation";
 
 function Project() {
   const transitionAnimation = {
@@ -37,13 +38,13 @@ function Project() {
         {projects.map((project) => (
           <div
             key={project.id}
-            className="flex flex-col gap-2 p-4 border-b-[1px] border-neutral-700"
+            className="flex flex-col gap-2 p-4"
           >
             <Link href={project.link}>
               <motion.img
                 src={project.img}
                 alt="project1"
-                whileHover={{ scale: 0.99 }}
+                whileHover={{ scale: 0.95 }}
                 transition={{
                   duration: 0.5,
                 }}
@@ -56,6 +57,7 @@ function Project() {
               <p>{project.title}</p>
               <span className="text-neutral-300 text-sm">{project.desc}</span>
             </div>
+            <BorderAnimation />
           </div>
         ))}
       </div>

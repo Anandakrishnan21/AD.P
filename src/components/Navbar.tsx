@@ -8,6 +8,10 @@ function Navbar() {
     visible: {
       opacity: 1,
       y: 0,
+      transition: {
+        staggerChildren: 0.1,
+        duration: 0.5,
+      },
     },
     hidden: {
       opacity: 0,
@@ -20,10 +24,6 @@ function Navbar() {
       <motion.div
         initial="hidden"
         animate="visible"
-        transition={{
-          staggerChildren: 0.1,
-          duration: 0.5,
-        }}
         variants={transitionAnimation}
         className="navDiv"
       >
